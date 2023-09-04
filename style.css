@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+.todo-list{
+    width: 40%;
+    margin: 150px auto 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.todo-list h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #002765;
+}
+.todo-list h2 img{
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.row input{
+    height: 60px;
+    width: 67%;
+    padding: 10px;
+    font-size: 18px;
+    background: transparent;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    margin: auto;
+}
+
+.row .btn{
+    height: 60px;
+    width: 25%;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 50px;
+    position: relative;
+    left: -50px;
+    background-color: #FB8C00;
+    border: 1px solid #FB8C00;
+}
+
+ul li{
+    width: 90%;
+    margin: auto;
+    list-style: none;
+    font-size: 18px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-image: url('./images/unchecked.png');
+    background-position: center;
+    background-size: cover;
+    top: 20px;
+    left: 8px;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #555;
+}
+
+ul li.checked::before{
+    background-image: url('./images/checked.png');
+}
+
+ul li span{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul li span:hover{
+    background-color: #bebdbd;
+    border-radius: 50%;
+}
